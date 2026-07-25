@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Summary</title>
+  <link rel="stylesheet" href="css/orderdetails.css">
+</head>
+<body>
+
+<div class="summary-box">
+  <h2>🧾 Order Summary</h2>
+
+  <!-- ORDER DETAILS -->
+  <p><b>Item:</b> <span id="item"></span></p>
+  <p><b>Price:</b> ₹<span id="price"></span></p>
+  <p><b>Quantity:</b> <span id="quantity"></span></p>
+  <hr>
+  <p class="total"><b>Total:</b> ₹<span id="total"></span></p>
+
+  <hr>
+
+  <!-- CUSTOMER DETAILS -->
+  <h3>👤 Customer Details</h3>
+
+  <label>Your Name</label>
+  <input type="text" id="name" placeholder="Enter your name" required>
+
+  <label>Phone Number</label>
+  <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+  <label>Address</label>
+  <textarea id="address" placeholder="Enter delivery address" required></textarea>
+
+  <button onclick="confirmOrder()">
+    <a href="thankyou.html">Confirm Order</a></button>
+</div>
+
+<script>
+document.getElementById("item").innerText = localStorage.getItem("item");
+document.getElementById("price").innerText = localStorage.getItem("price");
+document.getElementById("quantity").innerText = localStorage.getItem("quantity");
+document.getElementById("total").innerText = localStorage.getItem("total");
+
+function confirmOrder() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+
+  if (name === "" || phone === "" || address === "") {
+    alert("Please fill all customer details");
+    return;
+  }
+
+  alert(
+    "🎉 Order Confirmed!\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Address: " + address
+  );
+
+  localStorage.clear();
+  window.location.href = "thankyou.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f7efe6;
+    color: #4a2c1d;
+}
+
+/* HEADER */
+.header {
+   
+    background-color: #6b3e26;
+    text-align: center;
+    padding: 25px;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+.header p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* NAVBAR */
+.navbar {
+    
+    background-color: #4a2c1d;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 15px 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+/* BEST SELLERS */
+.Cakes {
+    text-align: center;
+    padding: 40px;
+}
+
+.Cakes h2 {
+    margin-bottom: 30px;
+}
+
+.items {
+    display:flex;
+    justify-content:center;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 280px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.616);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+ .card button {
+    background-color:#6b3e26;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:background-color 0.3s ease;
+} 
